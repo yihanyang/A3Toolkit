@@ -65,7 +65,7 @@ function Button(window) {
 /**
  * 
  * @param {*} window 
- * @returns 
+ * @returns {Object}
  */
 function CheckBox(window) {
     var draw = window;
@@ -126,7 +126,7 @@ function CheckBox(window) {
  * 
  * @param {*} window 
  * @param {*} args 
- * @returns 
+ * @returns {Object}
  */
 function RadioBox(window, args) {
     // const radios = []
@@ -190,7 +190,7 @@ function RadioBox(window, args) {
 /**
  * 
  * @param {*} window 
- * @returns 
+ * @returns {Object}
  */
 function ScrollBar(window) {
     var draw = window;
@@ -259,7 +259,7 @@ function ScrollBar(window) {
 /**
  * 
  * @param {*} w 
- * @returns 
+ * @returns {Object}
  */
 function TextBox(w) {
 
@@ -328,7 +328,7 @@ function TextBox(w) {
 /**
  * 
  * @param {*} window 
- * @returns 
+ * @returns {Object}
  */
 function ProgressBar(window) {
     var draw = window;
@@ -399,7 +399,7 @@ function ProgressBar(window) {
 /**
  * 
  * @param {*} window 
- * @returns 
+ * @returns {Object}
  */
 function ToggleButton(window) {
     var draw = window;
