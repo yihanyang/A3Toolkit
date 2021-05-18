@@ -14,7 +14,7 @@ function Button(window) {
     })
     group.add(rect);
 
-    var text = draw.text('button').attr({ x: rect.width() / 2, y: rect.height() / 12 });
+    var text = draw.text('').attr({ x: rect.width() / 2, y: rect.height() / 12 });
     text.font({ anchor: 'middle', size: 20, family: 'Helvetica', fill: '#fff' });
     group.add(text);
     group.move(100, 100);
@@ -58,6 +58,9 @@ function Button(window) {
         },
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
+        },
+        setLabel: function(txt) {
+            text.text(txt)
         }
 
     }

@@ -8,6 +8,7 @@ btn.move(100, 100);
 btn.onclick(function(e) {
     console.log('click')
 });
+btn.setLabel('button');
 btn.onStateChange(function(e) {
     console.log(e)
 });
