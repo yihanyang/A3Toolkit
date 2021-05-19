@@ -32,12 +32,6 @@ function Button(window) {
             stateChangeEvent('mouseout')
         }
     })
-    rect.mouseup(function() {
-        this.fill({ color: 'red' })
-        if (stateChangeEvent) {
-            stateChangeEvent('mouseup')
-        }
-    })
     rect.click(function(event) {
         this.attr({
             fill: 'green',
@@ -47,6 +41,12 @@ function Button(window) {
             clickEvent(event)
         if (stateChangeEvent) {
             stateChangeEvent('click')
+        }
+    })
+    rect.mouseup(function() {
+        this.fill({ color: 'red' })
+        if (stateChangeEvent) {
+            stateChangeEvent('mouseup')
         }
     })
     return {
