@@ -50,15 +50,32 @@ function Button(window) {
         }
     })
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             rect.move(x, y);
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onclick: function(eventHandler) {
             clickEvent = eventHandler
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
+        /**
+         * 
+         * @param {*} txt 
+         */
         setLabel: function(txt) {
             text.text(txt)
         }
@@ -110,15 +127,31 @@ function CheckBox(window) {
     })
     var stateChangeEvent = null;
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             group.move(x, y);
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onChange: function(eventHandler) {
             onChangeEvent = eventHandler
         },
+        /**
+         * 
+         */
         onStateChange: function() {
             stateChangeEvent = eventHandler
         },
+        /**
+         * 
+         * @param {*} txt 
+         */
         setLabel: function(txt) {
             text.text(txt)
         }
@@ -175,15 +208,32 @@ function RadioBox(window, args) {
     var onChangeEvent = null;
     var stateChangeEvent = null;
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             groupRadios.move(x, y)
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onChange: function(eventHandler) {
             onChangeEvent = eventHandler
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
+        /**
+         * 
+         * @param {*} txt 
+         */
         setLabel: function(txt) {
             text.text(txt)
         }
@@ -235,9 +285,18 @@ function ScrollBar(window) {
     })
     var stateChangeEvent = null;
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             group.move(x, y)
         },
+        /**
+         * 
+         * @param {*} value 
+         */
         setHeight: function(value) {
             group.height(value)
             main.height(value)
@@ -251,9 +310,17 @@ function ScrollBar(window) {
             down.y(group.y() + value - HEIGHT)
 
         },
+        /**
+         * 
+         * @returns 
+         */
         getPosition: function() {
             return { x: wheel.x(), y: wheel.y() };
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
@@ -312,15 +379,32 @@ function TextBox(w) {
 
     var stateChangeEvent = null;
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             group.move(x, y)
         },
+        /**
+         * 
+         * @param {*} onChangeEventHandler 
+         */
         onChange: function(onChangeEventHandler) {
             onChangeEvent = onChangeEventHandler
         },
+        /**
+         * 
+         * @returns 
+         */
         text: function() {
             return text.text();
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
@@ -357,9 +441,18 @@ function ProgressBar(window) {
     var stateChangeEvent = null;
 
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             group.move(x, y);
         },
+        /**
+         * 
+         * @param {*} speed 
+         */
         progress: function(speed) {
             let progress
             if (speed) {
@@ -382,16 +475,33 @@ function ProgressBar(window) {
             }
 
         },
+        /**
+         * 
+         * @param {*} width 
+         * @param {*} height 
+         */
         size: function(width, height) {
             rect.attr({ width, height })
             innerRect.attr({ height })
         },
+        /**
+         * 
+         * @param {*} inc 
+         */
         setIncrement: function(inc) {
             increment = inc;
         },
+        /**
+         * 
+         * @returns 
+         */
         getIncrement: function() {
             return increment;
         },
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
@@ -449,10 +559,18 @@ function ToggleButton(window) {
     var stateChangeEvent = null;
 
     return {
+        /**
+         * 
+         * @param {*} x 
+         * @param {*} y 
+         */
         move: function(x, y) {
             group.move(x, y);
         },
-
+        /**
+         * 
+         * @param {*} eventHandler 
+         */
         onStateChange: function(eventHandler) {
             stateChangeEvent = eventHandler
         },
