@@ -265,7 +265,7 @@ function ScrollBar(window) {
         else
             wheel.move(wheel.x(), up.y() + HEIGHT)
         if (stateChangeEvent)
-            stateChangeEvent('scroll up' + y)
+            stateChangeEvent('scroll up ' + wheel.y())
     })
     down.click(() => {
         if (down.y() > wheel.y() + HEIGHT)
@@ -274,7 +274,7 @@ function ScrollBar(window) {
             wheel.move(wheel.x(), down.y() - HEIGHT)
 
         if (stateChangeEvent)
-            stateChangeEvent('scroll down' + y)
+            stateChangeEvent('scroll down ' + wheel.y())
     })
     middle.on('click', (event) => {
         let y = Math.min(event.layerY, down.y() - HEIGHT)
