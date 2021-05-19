@@ -1,6 +1,6 @@
 /**
  * This is a function
- * @param {*} window 
+ * @param {any} window 
  * @returns {Object} 
  */
 function Button(window) {
@@ -261,11 +261,10 @@ function ScrollBar(window) {
 }
 /**
  * 
- * @param {*} w 
+ * @param {*} window
  * @returns {Object}
  */
 function TextBox(w) {
-
     var draw = w;
     var group = draw.group();
     var foused = false
