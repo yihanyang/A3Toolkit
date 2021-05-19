@@ -33,7 +33,7 @@ function Button(window) {
         }
     })
     rect.mouseup(function() {
-        this.fill({ color: 'purple' })
+        this.fill({ color: 'red' })
         if (stateChangeEvent) {
             stateChangeEvent('mouseup')
         }
